@@ -1,0 +1,6 @@
+---
+applications:
+- name: stocks
+  buildpack: python_buildpack
+  memory: 128M
+  disk_quota: 512M

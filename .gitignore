@@ -1,0 +1,4 @@
+excluded
+.DS_Store
+.idea
+*.ipynb

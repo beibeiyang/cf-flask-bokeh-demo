@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Stock Visualization</h1>
+    <h2>Please enter a stock ticker eg. GOOG, and check desired features.</h2>
+    <form action="/" method="POST">
+        <p>
+            <span style="color:red">*</span>Ticker symbol:
+            {{ form.symbol(size=10) }}
+        </p>
+        <p>
+            {{ form.closingPrice(value='y') }} {{ form.closingPrice.label }}<br/>
+            {{ form.openingPrice(value='n') }} {{ form.openingPrice.label }}<br/>
+            {{ form.highLow(value='n') }} {{ form.highLow.label }}
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+
+        </p>
+    </form>
+</body>
+</html>
