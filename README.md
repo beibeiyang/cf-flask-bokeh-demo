@@ -12,7 +12,7 @@ Live example: [http://stocks.cfapps.io](http://stocks.cfapps.io)
 Here are the steps to push the app to Cloud Foundry:
 
 * Modify `manifest.yml` to tailor to your environment settings
-* Enter `cf login ...` to point to your CF API URL and the correct org and space
+* Enter `cf login ...` to point to your CF API endpoint and the correct org and space
 * Enter `cf push`
 
 #Caveat
