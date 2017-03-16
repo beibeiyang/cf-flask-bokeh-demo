@@ -64,6 +64,11 @@ def plot():
         div = '<p>%s</p>' % json_data['quandl_error']
         return render_template('graph.html', script='', div=div, header='')
 
+    # other errors
+    if  'error' in json_data:
+        div = '<p>%s</p>' % json_data['error']
+        return render_template('graph.html', script='', div=div, header='')
+
     df = DataFrame(data=json_data['data'], columns=json_data['column_names'])
 
     #output_file('bokeh-demo.html', title='Stock Price', autosave=False, mode='inline')
