@@ -15,7 +15,7 @@ $ python stocks.py
  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
 ```
 
-# To Use
+# Push to Cloud Foundry
 
 Here are the steps to push the app to Cloud Foundry:
 
