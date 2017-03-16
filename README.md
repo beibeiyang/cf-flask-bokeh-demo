@@ -1,4 +1,4 @@
-#Stock Visualization using Python, Flask, Bokeh and Cloud Foundry
+# Stock Visualization using Python, Flask, Bokeh and Cloud Foundry
 
 This Python application is empowered by [Flask](http://flask.pocoo.org) and [Bokeh](http://bokeh.pydata.org) and can be pushed to [Pivotal Cloud Foundry](http://pivotal.io/platform) or the open-sourced [Cloud Foundry](https://www.cloudfoundry.org) with the built-in CF Python Buildpack.
 
@@ -7,7 +7,7 @@ This app calls the [Quandl Wiki EOD Stock Prices API](http://www.quandl.com) to 
 Live example: [http://stocks.cfapps.io](http://stocks.cfapps.io)
 
 
-#To Use
+# To Use
 
 Here are the steps to push the app to Cloud Foundry:
 
@@ -15,12 +15,12 @@ Here are the steps to push the app to Cloud Foundry:
 * Enter `cf login ...` to point to your CF API endpoint and the correct org and space
 * Enter `cf push`
 
-#Caveat
+# Caveat
 
-The app requires Bokeh v0.12.0 as defined in `requirements.txt`. You must update the template file `templates\graph.html` if you choose to use a different version of Bokeh.
+The app requires Bokeh v0.12.4 as defined in `requirements.txt`. You must update the template file `templates\graph.html` if you choose to use a different version of Bokeh.
 
 
-#License
+# License
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

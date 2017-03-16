@@ -2,4 +2,4 @@ numpy
 pandas>=0.18.0
 Flask>=0.11.0
 Flask-WTF
-bokeh==0.12.0
+bokeh==0.12.4
