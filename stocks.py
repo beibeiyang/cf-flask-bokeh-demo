@@ -51,11 +51,19 @@ def plot():
 
     api_url = 'https://www.quandl.com/api/v1/datasets/WIKI/%s.json' % symbol
     session = requests.Session()
-    session.mount('http://', requests.adapters.HTTPAdapter(max_retries=3))
+    session.mount('https://', requests.adapters.HTTPAdapter(max_retries=3))
     raw_data = session.get(api_url).text
     json_data = json.loads(raw_data)
 
+    print ('json_data:', json_data)
+
     from pandas import DataFrame
+
+    # if exceeding API limit
+    if  'quandl_error' in json_data:
+        div = '<p>%s</p>' % json_data['quandl_error']
+        return render_template('graph.html', script='', div=div, header='')
+
     df = DataFrame(data=json_data['data'], columns=json_data['column_names'])
 
     #output_file('bokeh-demo.html', title='Stock Price', autosave=False, mode='inline')
