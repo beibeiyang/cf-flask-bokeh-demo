@@ -2,10 +2,18 @@
 
 This Python application is empowered by [Flask](http://flask.pocoo.org) and [Bokeh](http://bokeh.pydata.org) and can be pushed to [Pivotal Cloud Foundry](http://pivotal.io/platform) or the open-source [Cloud Foundry](https://www.cloudfoundry.org) with the built-in CF Python Buildpack.
 
-This app calls the [Quandl Wiki EOD Stock Prices API](http://www.quandl.com) to retrieve stock prices and visualize the data using Bokeh over the Flask framework.
+This app calls the [Quandl Wiki EOD Stock Prices API](http://www.quandl.com) to retrieve stock prices and visualize the data using Bokeh over the Flask framework. Anonymous user is limited to 50 calls per day. Get a Quandl API key if you want more intensive use.
 
 Live example: [http://stocks.cfapps.io](http://stocks.cfapps.io)
 
+# Run Locally
+
+Install dependencies: `pip install -r requirements.txt`
+
+```
+$ python stocks.py
+ * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+```
 
 # To Use
 
